@@ -11,13 +11,13 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-<link rel="shortcut icon" href="/favicon.ico?v=x12">
+<link rel="shortcut icon" href="/browser/favicon.ico?v=x12">
 
 <!-- bower_components is deleted after vulcanization so files that should be
   retained must be added to excludes array in `removeBowerComponents` function -->
-<script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-<link rel="stylesheet" href="/styles/custom.css" media="all" async type="text/css">
-<link rel="import" href="/components/elements.html">
+<script src="/browser/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="stylesheet" href="/browser/styles/custom.css" media="all" async type="text/css">
+<link rel="import" href="/browser/components/elements.html">
 
 
 <!--[if lt IE 10 ]>
@@ -39,8 +39,8 @@
   <t-scaffold id="scaff" scaffold-type="atom">
     <nav-toolbar>
       <div class="product-logo" >
-        <a href="/">
-          <img src="/assets/logo.png" id="prod_brand" />
+        <a href="/browser/">
+          <img src="/browser/assets/logo.png" id="prod_brand" />
         </a>
       </div>
     </nav-toolbar>
@@ -79,7 +79,7 @@
                     class="component-link  iron-selected "
                      active 
                     data-component="t-button"
-                    onclick="redirect('/button/')"
+                    onclick="redirect('/browser/button/')"
                     data-category="form">
 
                     Button
@@ -108,7 +108,7 @@
                 class="component-link "
                 
                 data-component="demo-tester"
-                onclick="redirect('/demo-tester/')">
+                onclick="redirect('/browser/demo-tester/')">
 
                 Demo Tester
                 
@@ -121,14 +121,14 @@
         
           <paper-item
             class="top "
-            onClick="redirect('/about/')">
+            onClick="redirect('/browser/about/')">
 
             About
           </paper-item>
         
           <paper-item
             class="top "
-            onClick="redirect('/settings/')">
+            onClick="redirect('/browser/settings/')">
 
             Settings
           </paper-item>
@@ -142,7 +142,7 @@
 
     <build-status
       total="1"
-      element-ids-file-path="/element-ids.json">
+      element-ids-file-path="/browser/element-ids.json">
     </build-status>
 
     
@@ -217,18 +217,18 @@ A button is a basic element & is generally used in forms, dialog boxes, call to 
       </div>
     </div>
     <div class="fit">
-      <iframe id="idIframe" src="/button/bower_components/t-button/" width="100%"></iframe>
+      <iframe id="idIframe" src="/browser/button/bower_components/t-button/" width="100%"></iframe>
     </div>
     
       <div class="fit">
         <t-demo-atom
-          demo-file="/button/bower_components/t-button/demo/atom.html"
-          properties-file="/button/bower_components/t-button/property.json"
+          demo-file="/browser/button/bower_components/t-button/demo/atom.html"
+          properties-file="/browser/button/bower_components/t-button/property.json"
           el-name="t-button"
           el-disp-name="button"
           el-dependencies='[{"relPath":"webcomponentsjs/webcomponents-lite.js","install":"webcomponentsjs#^0.7.14","type":"script"},{"relPath":"t-button/t-button.html","install":"atomelements/t-button","type":"link"},{"relPath":"t-shared-components/theme.html","install":"atomelements/t-shared-components#^1.0.0","type":"link"},{"relPath":"iron-icons/iron-icons.html","install":"PolymerElements/iron-icons#^1.0.0","type":"link"}]'
           absolute-baseurl='https://atomproject.github.io/elements/'
-          baseurl=''>
+          baseurl='/browser'>
           <template></template>
         </t-demo-atom>
       </div>
