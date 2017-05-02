@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>
+  
+    Button | Docs
+  
+</title>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+<link rel="shortcut icon" href="/favicon.ico?v=x12">
+
+<!-- bower_components is deleted after vulcanization so files that should be
+  retained must be added to excludes array in `removeBowerComponents` function -->
+<script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="stylesheet" href="/styles/custom.css" media="all" async type="text/css">
+<link rel="import" href="/components/elements.html">
+
+
+<!--[if lt IE 10 ]>
+  <script type='text/javascript'>
+    alert( 'Your IE is Old' );
+
+    // or set a flag or something
+
+    var oldIE = true;
+  </script>
+<![endif]-->
+
+
+</head>
+<body class="layout horizontal center center-justified">
+
+  <div class="overlay"></div>
+
+  <t-scaffold id="scaff" scaffold-type="atom">
+    <nav-toolbar>
+      <div class="product-logo" >
+        <a href="/">
+          <img src="/assets/logo.png" id="prod_brand" />
+        </a>
+      </div>
+    </nav-toolbar>
+
+    <header-toolbar style="width:100%">
+      <div class="horizontal layout center">
+        
+          <span id="selectedComponent">Button</span>
+          
+            <a class="buildStatus" href="https://travis-ci.org/atomelements/t-button/">
+              <img src="https://travis-ci.org/atomelements/t-button.svg?branch=master" alt="Build Status">
+            </a>
+          
+        
+        <!--  -->
+      </div>
+    </header-toolbar>
+
+    <nav-content>
+      <paper-menu class="nav-panel">
+        <paper-submenu opened>
+          <paper-item class="top menu-trigger iron-selected">
+            <span class="label">Elements</span>
+            <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+          </paper-item>
+          <paper-menu class="menu-content">
+          
+            <paper-submenu  opened >
+              <paper-item class="menu-trigger  iron-selected ">
+                <span class="label">Form Basic</span>
+                <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+              </paper-item>
+              <paper-menu class="menu-content" selected="0">
+                
+                  <paper-item
+                    class="component-link  iron-selected "
+                     active 
+                    data-component="t-button"
+                    onclick="redirect('/button/')"
+                    data-category="form">
+
+                    Button
+                    
+                  </paper-item>
+                
+              </paper-menu>
+            </paper-submenu>
+          
+            <paper-submenu >
+              <paper-item class="menu-trigger ">
+                <span class="label">Data</span>
+                <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+              </paper-item>
+              <paper-menu class="menu-content" selected="0">
+                
+              </paper-menu>
+            </paper-submenu>
+          
+
+          
+            
+          
+            
+              <paper-item
+                class="component-link "
+                
+                data-component="demo-tester"
+                onclick="redirect('/demo-tester/')">
+
+                Demo Tester
+                
+              </paper-item>
+            
+          
+          </paper-menu>
+        </paper-submenu>
+
+        
+          <paper-item
+            class="top "
+            onClick="redirect('/about/')">
+
+            About
+          </paper-item>
+        
+          <paper-item
+            class="top "
+            onClick="redirect('/settings/')">
+
+            Settings
+          </paper-item>
+        
+      </paper-menu>
+    </nav-content>
+
+    <footer>
+      <p>atom-elements.io</p>
+    </footer>
+
+    <build-status
+      total="1"
+      element-ids-file-path="/element-ids.json">
+    </build-status>
+
+    
+<div id="elementContent" class="content layout vertical fit content-component">
+  <div id="tabBar" class="layout horizontal center-justified">
+    <paper-tabs noink  selected="2" >
+      <paper-tab>Design Considerations</paper-tab>
+      <paper-tab>Dev Zone</paper-tab>
+      
+        <paper-tab>Demo</paper-tab>
+      
+    </paper-tabs>
+  </div>
+  <iron-pages selected="2" class="flex" style="position:relative">
+    <div class="fit designTabWrapper">
+      <div class="designTab">
+        <marked-element>
+          <div class="markdown-html"></div>
+          <script type="text/markdown">
+						
+A button is a basic element & is generally used in forms, dialog boxes, call to action containers etc. It is different from a link. It can have text, an icon, or both.
+
+## Data Needed 
+
+**1. Label**
+
+* Used to display the text inside the button.
+* Shown as an input field in the property panel.
+* Default value: Label.
+
+**2. Icon**
+
+* Used to choose the icon to display inside the button.
+* Shown as an icon picker in the property panel.
+* Possible values are currently limited to a hard coded icon set, but in future users will be able to work with any SVG icon.
+* Default value: None.
+
+## Properties Exposed 
+
+**1. Raised**
+
+* Used to provide a shadow effect below the button.
+* Shown as a checkbox in the property panel.
+* Default Value: Checked.
+
+**2. Icon Only**
+
+* Used to hide the text label in the button.
+* Shown as a checkbox in the property panel.
+* Default Value: Unchecked.
+
+**3. Left Align Icon**
+
+* Used to left align the icon in the button.
+* Shown as a checkbox in the property panel.
+* Default Value: Unchecked.
+
+**4. Remove Ink Effect**
+
+* Used to remove the ink effect which appears after clicking the button.
+* Shown as a checkbox in the property panel.
+* Default Value: Unchecked.
+
+**5. Toggle**
+
+* Used to turn the button into a toggle button.
+* Shown as a checkbox in the property panel.
+* Default Value: Unchecked.
+
+          </script>
+        </marked-element>
+      </div>
+    </div>
+    <div class="fit">
+      <iframe id="idIframe" src="/button/bower_components/t-button/" width="100%"></iframe>
+    </div>
+    
+      <div class="fit">
+        <t-demo-atom
+          demo-file="/button/bower_components/t-button/demo/atom.html"
+          properties-file="/button/bower_components/t-button/property.json"
+          el-name="t-button"
+          el-disp-name="button"
+          el-dependencies='[{"relPath":"webcomponentsjs/webcomponents-lite.js","install":"webcomponentsjs#^0.7.14","type":"script"},{"relPath":"t-button/t-button.html","install":"atomelements/t-button","type":"link"},{"relPath":"t-shared-components/theme.html","install":"atomelements/t-shared-components#^1.0.0","type":"link"},{"relPath":"iron-icons/iron-icons.html","install":"PolymerElements/iron-icons#^1.0.0","type":"link"}]'
+          absolute-baseurl='https://atomproject.github.io/elements/'
+          baseurl=''>
+          <template></template>
+        </t-demo-atom>
+      </div>
+    
+  </iron-pages>
+</div>
+
+<script type="text/javascript">
+  (function() {
+    var pages = document.querySelector('iron-pages');
+    var tabs = document.querySelector('paper-tabs');
+
+    tabs.addEventListener('iron-select', function () {
+      pages.selected = tabs.selected;
+    });
+  })();
+</script>
+
+  </t-scaffold>
+
+  <script>
+    window.addEventListener('WebComponentsReady', function (e) {
+      var overlay = document.querySelector('.overlay');
+
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+    });
+
+    //this is __BAD__, first of all it shouldn't be global function
+    //second if this function doesn't do much apart from simple plain
+    //redirection then it should be handled using anchor tags
+    function redirect(url) {
+      window.location = url;
+    }
+  </script>
+</body>
+</html>
